@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ReRack — discover, buy and resell unique thrifted goods.">
+  <title>ReRack | Thrift. Rewear. Repeat.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="announcement">
+    ♻️ Buy pre-loved. Sell what you don't wear. Give fashion another life.
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">Re<span>Rack</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#sell">Sell</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon" onclick="showToast('Search coming soon')">⌕</button>
+        <button class="nav-icon" onclick="showToast('Wishlist opened')">♡</button>
+        <button class="nav-icon" onclick="showToast('Your bag is empty')">🛒</button>
+        <button class="sell-btn" onclick="location.href='#sell'">Sell an Item</button>
+        <button class="nav-icon menu-btn" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <section class="container hero">
+      <div>
+        <div class="eyebrow">Thrift differently • ReRack</div>
+        <h1>Pre-loved. Carefully picked. Ready for a new <em>life.</em></h1>
+        <p>
+          Discover unique pre-loved fashion, find pieces with character,
+          and give your wardrobe a second chance — all in one place.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="primary-btn" href="#shop">Shop Fresh Finds</a>
+          <a class="outline-btn" href="#sell">Sell Your Clothes</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-tag">Curated thrift • Made for another story</div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Explore</div>
+            <h2>Shop by category</h2>
+          </div>
+          <p>From everyday essentials to one-of-a-kind vintage finds, discover something that feels like you.</p>
+        </div>
+
+        <div class="categories">
+
+          <a class="category" href="#shop">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80"
+                alt="Tops">
+            </div>
+            <h3>Tops</h3>
+          </a>
+
+          <a class="category" href="#shop">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=500&q=80"
+                alt="Bottoms">
+            </div>
+            <h3>Bottoms</h3>
+          </a>
+
+          <a class="category" href="#shop">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=500&q=80"
+                alt="Jackets">
+            </div>
+            <h3>Jackets</h3>
+          </a>
+
+          <a class="category" href="#shop">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80"
+                alt="Shoes">
+            </div>
+            <h3>Shoes</h3>
+          </a>
+
+          <a class="category" href="#shop">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80"
+                alt="Accessories">
+            </div>
+            <h3>Accessories</h3>
+          </a>
+
+          <a class="category" href="#shop">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80"
+                alt="Vintage fashion">
+            </div>
+            <h3>Vintage</h3>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="shop-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Freshly Reracked</div>
+            <h2>Fresh finds</h2>
+          </div>
+          <p>Unique pieces. Limited quantities. Once it's gone, it's part of someone else's story.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" onclick="filterProducts('all', this)">All</button>
+          <button class="filter" onclick="filterProducts('tops', this)">Tops</button>
+          <button class="filter" onclick="filterProducts('bottoms', this)">Bottoms</button>
+          <button class="filter" onclick="filterProducts('jackets', this)">Jackets</button>
+          <button class="filter" onclick="filterProducts('shoes', this)">Shoes</button>
+          <button class="filter" onclick="filterProducts('accessories', this)">Accessories</button>
+        </div>
+
+        <div class="products">
+
+          <article class="product-card" data-category="jackets">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80" alt="Vintage denim jacket">
+              <span class="condition">EXCELLENT</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>Jackets</small>
+              <h3>Vintage Denim Jacket</h3>
+              <span class="price">Rs. 1,499</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="tops">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Oversized white t-shirt">
+              <span class="condition">LIKE NEW</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>T-Shirts</small>
+              <h3>Classic Oversized Tee</h3>
+              <span class="price">Rs. 799</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="bottoms">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=700&q=80" alt="Cargo pants">
+              <span class="condition">GOOD</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>Bottoms</small>
+              <h3>Relaxed Cargo Pants</h3>
+              <span class="price">Rs. 1,299</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="shoes">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Retro sneakers">
+              <span class="condition">EXCELLENT</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>Shoes</small>
+              <h3>Retro Everyday Sneakers</h3>
+              <span class="price">Rs. 2,499</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="tops">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=700&q=80" alt="Flannel shirt">
+              <span class="condition">GOOD</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>Shirts</small>
+              <h3>Checked Flannel Shirt</h3>
+              <span class="price">Rs. 999</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80" alt="Leather bag">
+              <span class="condition">EXCELLENT</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>Accessories</small>
+              <h3>Classic Crossbody Bag</h3>
+              <span class="price">Rs. 1,099</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="bottoms">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80" alt="Vintage jeans">
+              <span class="condition">LIKE NEW</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>Denim</small>
+              <h3>Vintage Straight Jeans</h3>
+              <span class="price">Rs. 1,399</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="jackets">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=80" alt="Vintage fashion jacket">
+              <span class="condition">GOOD</span>
+              <button class="heart" onclick="showToast('Added to wishlist')">♡</button>
+            </div>
+            <div class="product-info">
+              <small>Outerwear</small>
+              <h3>90s Inspired Jacket</h3>
+              <span class="price">Rs. 1,899</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">The ReRack way</div>
+            <h2>Thrift. Choose. Rerack.</h2>
+          </div>
+          <p>We make buying and reselling pre-loved fashion simple, personal and more circular.</p>
+        </div>
+
+        <div class="how-grid">
+          <div class="step">
+            <span class="step-number">01</span>
+            <h3>Discover</h3>
+            <p>Browse curated second-hand pieces from independent sellers and thrift lovers.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">02</span>
+            <h3>Choose</h3>
+            <p>Find your fit using categories, sizes, conditions and prices that work for you.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">03</span>
+            <h3>Checkout</h3>
+            <p>Save your favorites and make your purchase through a simple shopping experience.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">04</span>
+            <h3>Rerack</h3>
+            <p>When you're done with a piece, sell it again and keep its story moving forward.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sell" class="sell-section">
+      <div class="container sell-grid">
+        <div>
+          <div class="eyebrow">Sell with ReRack</div>
+          <h2>Your closet could be someone's next find.</h2>
+          <p>
+            Got clothes you don't wear anymore? Turn unused pieces into
+            something valuable while giving someone else the chance to love them.
+          </p>
+          <a href="#" class="light-btn" onclick="showToast('Seller registration coming soon'); return false;">Start Selling →</a>
+        </div>
+
+        <div class="sell-image"></div>
+      </div>
+    </section>
+
+    <section id="journal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">The ReRack Journal</div>
+            <h2>Thrift stories & tips</h2>
+          </div>
+          <p>Style inspiration, smart shopping tips and ideas for building a wardrobe with more character.</p>
+        </div>
+
+        <div class="journal">
+
+          <article class="article">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80" alt="Thrift fashion">
+            <div class="article-body">
+              <small>Style</small>
+              <h3>How to build a wardrobe that feels uniquely yours</h3>
+              <p>Mix timeless pieces with unexpected thrift finds to create a style that doesn't look like everyone else's.</p>
+            </div>
+          </article>
+
+          <article class="article">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80" alt="Clothing rack">
+            <div class="article-body">
+              <small>Thrift Tips</small>
+              <h3>5 things to check before buying second-hand</h3>
+              <p>Learn how to check condition, fit, fabric and details before you buy.</p>
+            </div>
+          </article>
+
+          <article class="article">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Street style">
+            <div class="article-body">
+              <small>Mindful Fashion</small>
+              <h3>Why giving clothes another life matters</h3>
+              <p>Second-hand shopping can make fashion more intentional and personal.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Community</div>
+            <h2>Loved by thrift lovers.</h2>
+          </div>
+        </div>
+
+        <div class="review-grid">
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"I found a vintage jacket I couldn't find anywhere else. The quality was amazing."</p>
+            <strong>— Aayush, Kathmandu</strong>
+          </div>
+
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"ReRack makes it feel easy to sell clothes I don't wear anymore instead of letting them sit in my closet."</p>
+            <strong>— Addrina, Lalitpur</strong>
+          </div>
+
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>"Affordable, unique and much more fun than buying the same thing everyone else has."</p>
+            <strong>— John, Bhaktapur</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="eyebrow">Stay in the loop</div>
+        <h2>New finds, straight to your inbox.</h2>
+        <p>Get first access to fresh drops, thrift tips and ReRack stories.</p>
+
+        <form class="newsletter-form" onsubmit="subscribe(event)">
+          <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+          <button class="primary-btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="logo">Re<span>Rack</span></div>
+          <p>Good clothes deserve another life. Discover, buy and resell pre-loved fashion.</p>
+        </div>
+
+        <div>
+          <strong>Shop</strong>
+          <ul>
+            <li><a href="#shop">All Items</a></li>
+            <li><a href="#categories">Clothing</a></li>
+            <li><a href="#categories">Shoes</a></li>
+            <li><a href="#categories">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Sell</strong>
+          <ul>
+            <li><a href="#sell">Sell an Item</a></li>
+            <li><a href="#sell">Seller Guide</a></li>
+            <li><a href="#sell">Seller FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Help</strong>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 ReRack. All Rights Reserved.</span>
+        <span>Instagram · TikTok · Facebook</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
